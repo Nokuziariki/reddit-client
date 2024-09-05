@@ -2,10 +2,10 @@
 .header {
     height: 100px;
     width: 100%;
+    background-color: aqua;
 }
 
 .header-container {
-    background-color: aqua;
     padding: 20px;
     display: flex;
     flex-direction: row;

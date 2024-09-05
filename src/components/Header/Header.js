@@ -1,10 +1,15 @@
-import React from "react";
+import React,  { useCallback } from "react";
 import './Header.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
-import { faRedditAlien } from "@fortawesome/free-brands-svg-icons";
+import { faRedditAlien } from '@fortawesome/free-brands-svg-icons';
+import { SearchBar } from '../SearchBar/SearchBar';
 
 function Header() {
+
+    const handleSearch = useCallback((searchTerm) => {
+        // Itt lesz az API
+      }, []);
+
     return (
         <div className="header">
             <div className="header-container">
@@ -15,12 +20,7 @@ function Header() {
                     <h1 className="main-title">Reddit Client</h1>
                 </div>
                 <div className="search-zone">
-                    <div className="search-parts">
-                        <input className="search-input" />
-                        <button className="search-button">
-                            <FontAwesomeIcon className="search-icon" icon={faMagnifyingGlass} />
-                        </button>
-                    </div>
+                    <SearchBar onSearch={handleSearch}/>
                 </div>
             </div>
         </div>
