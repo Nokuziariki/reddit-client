@@ -30,9 +30,16 @@ const PostList = () => {
     if (!posts || posts.length === 0) return <div>Nincsenek találatok</div>;
   
     return (
-      <div>
+      <div className="PostList">
         {posts.map(post => (
-          <div key={post.data.id}>{post.data.title}</div>
+          <div key={post.data.id} className="post-item">
+            <p className="post-title">{post.data.title}</p>
+            {post.data.thumbnail && post.data.thumbnail !== 'self' ? (
+                <img className="post-thumbnail" src={post.data.thumbnail} alt="" />
+            ) : (
+                <p>No image available</p>
+            )}
+          </div>
         ))}
       </div>
     );

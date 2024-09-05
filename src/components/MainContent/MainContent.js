@@ -10,7 +10,10 @@ function MainContent() {
                     <h2>Posts</h2>
                     <PostList />
                 </div>
-                <div className="main-subs">Subbreddits</div>
+                <div className="main-subs">
+                    <h2>Subbreddits</h2>
+                    <div></div>
+                </div>
             </div>
         </div>
     )

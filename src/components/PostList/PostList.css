@@ -1,5 +1,45 @@
 .PostList {
-    border: 1px solid black;
-    width: 50%;
-    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    overflow-y: auto;
+    margin-bottom: 16px;
+}
+
+.PostList::-webkit-scrollbar {
+    width: 20px;
+}
+
+.PostList::-webkit-scrollbar-thumb {
+    background: linear-gradient(transparent,white);
+    border-radius: 10px;
+}
+  
+.post-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 16px;
+    margin-left: 16px;
+    justify-content: space-between;
+    flex: 0 1 calc(100% - 32px);
+    height: 150px;
+    width: 100%;
+    border: 3px solid white;
+}
+
+.post-title {
+    border: 3px solid red;
+    max-height: 100%;
+    width: 70%;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.post-thumbnail {
+    display: flex;
+    width: 30%;
+    max-height: 100%;
+    width: auto;
+    border: 3px solid yellow;
 }
